@@ -16,4 +16,5 @@ code {
   display: flex;
   justify-content: space-around;
   z-index: 10;
+  color: beige;
 }
