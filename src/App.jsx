@@ -131,6 +131,8 @@ function App() {
       particles: {
         ...particles.particles,
         move: { ...particles.particles.move, attract: { ...particles.particles.move.attract, enable: !inputGravity } },
+        size: { ...particles.particles.size, value: inputSize/2 },
+        opacity: { ...particles.particles.opacity, value: inputOpacity/99 },
       },
     });
   }
@@ -143,7 +145,9 @@ function App() {
       ...particles,
       particles: {
         ...particles.particles,
+        move: { ...particles.particles.move, attract: { ...particles.particles.move.attract, enable: inputGravity } },
         size: { ...particles.particles.size, value: e.target.value / 2 },
+        opacity: { ...particles.particles.opacity, value: inputOpacity/99 },
       },
     });
   }
@@ -156,6 +160,8 @@ function App() {
       particles: {
         ...particles.particles,
         opacity: { ...particles.particles.opacity, value: e.target.value / 99 },
+        move: { ...particles.particles.move, attract: { ...particles.particles.move.attract, enable: inputGravity } },
+        size: { ...particles.particles.size, value: inputSize/2 },
       },
     });
   }
